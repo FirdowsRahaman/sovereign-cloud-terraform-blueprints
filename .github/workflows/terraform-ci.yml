@@ -1,0 +1,28 @@
+name: Terraform Validation CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.7.0"
+
+      - name: Validate Root Environment Module
+        run: |
+          cd environments/eu-central-1-frankfurt
+          terraform init -backend=false
+          terraform validate
+
+      - name: Verify EU AI Act Technical Documentation
+        run: test -f EU_AI_ACT_TECHNICAL_DOCUMENTATION.md && echo "✅ EU AI Act Documentation Verified"
