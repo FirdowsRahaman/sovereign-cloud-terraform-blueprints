@@ -1,4 +1,4 @@
-# Sovereign Cloud Terraform Blueprints 🇪🇺
+# Sovereign Cloud Terraform Blueprints 
 
 <p align="left">
   <img src="https://img.shields.io/badge/IaC-Terraform%20%7C%20OpenTofu-8B5CF6?style=flat-square&logo=terraform" alt="Terraform">
@@ -12,16 +12,16 @@ Production-ready, battle-tested **Terraform & OpenTofu infrastructure blueprints
 
 ---
 
-## 📑 Table of Contents
-- [Architecture Overview](#-architecture-overview)
-- [Modules Included](#-modules-included)
-- [Quick Start](#-quick-start)
-- [Security & Compliance Controls](#-security--compliance-controls)
-- [License](#-license)
+## Table of Contents
+- [Architecture Overview](#architecture-overview)
+- [Modules Included](#modules-included)
+- [Quick Start](#quick-start)
+- [Security & Compliance Controls](#security--compliance-controls)
+- [License](#license)
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ```
                       Internet
@@ -54,7 +54,7 @@ Production-ready, battle-tested **Terraform & OpenTofu infrastructure blueprints
 
 ---
 
-## 📦 Modules Included
+## Modules Included
 
 1. **`sovereign_vpc`**: Multi-tier isolated VPC with private-only subnets for GPU clusters, no public IP assignments, and VPC Flow Logs.
 2. **`kms_data_boundary`**: KMS Customer-Managed Keys (CMK) with automated rotation and cryptographic access controls under GDPR Article 32.
@@ -62,7 +62,7 @@ Production-ready, battle-tested **Terraform & OpenTofu infrastructure blueprints
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 cd environments/eu-central-1-frankfurt
@@ -72,5 +72,5 @@ terraform plan
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the MIT License.
